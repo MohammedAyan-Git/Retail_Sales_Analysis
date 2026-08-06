@@ -47,7 +47,22 @@ CREATE TABLE Retailsales(
 - **Customer Count**: Find out how many unique customers are in the dataset.
 - **Category Count**: Identify all unique product categories in the dataset.
 - **Null Value Check**: Check for any null values in the dataset and delete records with missing data.
+(DATA EXPLORATION)
 
+--HOW MANY SALES WE HAVE
+```sql
+SELECT COUNT(total_sale) AS total_sales FROM Retailsales;
+```
+--HOW MANY unique CUSTOMERS WE HAVE
+```sql
+SELECT COUNT(DISTINCT customer_id) AS total_customers FROM Retailsales;
+```
+--HOW MANY CATEGORIES WE HAVE
+```sql
+SELECT COUNT(DISTINCT category) FROM Retailsales;--for category count
+SELECT DISTINCT category FROM Retailsales;--for category name
+```
+(DATA CLEANING)
 ```sql
 SELECT COUNT(*) FROM retailsales;
 SELECT COUNT(DISTINCT customer_id) FROM retailsales;
@@ -97,22 +112,6 @@ WHERE
 	OR
 	total_sale IS NULL;
 ```
-(DATA EXPLORATION)
-
---HOW MANY SALES WE HAVE
-```sql
-SELECT COUNT(total_sale) AS total_sales FROM Retailsales;
-```
---HOW MANY unique CUSTOMERS WE HAVE
-```sql
-SELECT COUNT(DISTINCT customer_id) AS total_customers FROM Retailsales;
-```
---HOW MANY CATEGORIES WE HAVE
-```sql
-SELECT COUNT(DISTINCT category) FROM Retailsales;--for category count
-SELECT DISTINCT category FROM Retailsales;--for category name
-```
-
 ### 3. Data Analysis & Findings
 
 The following SQL queries were developed to answer specific business questions:
